@@ -1,0 +1,99 @@
+$dark-blue: #00003f;
+
+body{
+    background-color: $dark-blue;
+    position: relative;
+    z-index: 0; 
+}
+.home-main-area{
+    padding: 200px 0;
+    .home-main-bg{
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .home-main-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        z-index: 0;
+        .home-content-bg{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            svg{
+                animation: octagon 20s linear 0s infinite;
+                line{
+                    stroke: white;
+                    stroke-width: 4px;
+                    &.long{
+                        stroke-dasharray: 400px;
+                        animation: long 15s linear 0s infinite;
+                    }
+                    &.short{
+                        stroke-dasharray: 300px;
+                        animation: short 20s linear 0s infinite;
+                    }
+                }
+            }
+        }
+        .home-content-text{
+            padding: 50px;
+            padding-top: 100px;
+            text-align: center;
+            color: white;
+            h1{
+                font-size: 6em;
+                margin: 0;
+                margin-bottom: 40px;
+            }
+            h2{
+                font-size: 4em;
+                margin: 0;
+                margin-bottom: 20px;
+            }
+            h3{
+                font-size: 2em;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@keyframes octagon {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes long {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dashoffset: -800px;
+    }
+}
+
+@keyframes short {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dashoffset: -600px;
+    }
+}

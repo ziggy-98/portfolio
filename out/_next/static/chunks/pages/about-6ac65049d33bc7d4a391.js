@@ -1,1 +1,0 @@
-_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[6],{Juyh:function(n,_){},rB5V:function(n,_,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/about",function(){return o("Juyh")}])}},[["rB5V",0]]]);
